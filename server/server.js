@@ -27,7 +27,7 @@ app.get("/run-python/:age/:description", (req, res) => {
   // const command = `python check.py ${age} "Vega" False "${description}"`;
   // const description = "My bones feel weak.";
   exec(
-    `python3 check.py ${age} "Vega" False "${description}" "fish"`,
+    `python check.py ${age} "Vega" False "${description}" "fish"`,
     { maxBuffer: undefined },
     (error, stdout, stderr) => {
       if (error) {
