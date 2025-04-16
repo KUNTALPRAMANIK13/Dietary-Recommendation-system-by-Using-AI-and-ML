@@ -54,7 +54,7 @@ app.get("/run-python/:age/:description", (req, res) => {
 // MONGOOSE SETUP
 const PORT = process.env.PORT || 3001;
 mongoose
-  .connect(process.env.MONGO_URL || "mongodb://localhost:27017/vital", {})
+  .connect(process.env.MONGO_URL , {})
   .then(() => {
     if (process.env.NODE_ENV !== "test") {
       app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
